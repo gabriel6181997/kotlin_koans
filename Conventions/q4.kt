@@ -33,7 +33,7 @@ class RepeatedTimeInterval(val timeInterval: TimeInterval, val number: Int)
 
 operator fun TimeInterval.times(number: Int) = RepeatedTimeInterval(this,number)
 
-operator fun MyDate.plus(timeIntervals: RepeatedTimeInterval) = addTimeIntervals(timeIntervals.timerInterval,timeIntervals.number)
+operator fun MyDate.plus(timeIntervals: RepeatedTimeInterval) = addTimeIntervals(timeIntervals.timeInterval,timeIntervals.number)
 
 fun task1(today: MyDate): MyDate {
     return today + YEAR + WEEK
