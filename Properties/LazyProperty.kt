@@ -13,3 +13,7 @@ class LazyProperty(val initializer: () -> Int) {
           return value!!
       }
 }
+
+// !! will throw NullPointerException if the value is null.
+// Document of Null-safety in Kotlin
+// https://kotlinlang.org/docs/null-safety.html#the--operator
