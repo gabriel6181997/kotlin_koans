@@ -3,8 +3,8 @@
 // Learn about the other scope functions and how to use them.
 
 fun <T> T.myApply(f: T.() -> Unit): T {
-  f()
-    return this
+  f()            // f は引数を一つも取らず、かつ返り値もなし(Unit)な関数オブジェクトなので、f() で関数を実行してあげている
+    return this // this = T 型のインスタンス
 }
 
 fun createString(): String {
